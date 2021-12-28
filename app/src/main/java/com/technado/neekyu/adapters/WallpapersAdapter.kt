@@ -4,7 +4,9 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.technado.neekyu.R
 
@@ -18,7 +20,9 @@ class WallpapersAdapter(var context: Context, var list: List<String>) :
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-
+        holder.tvSet.setOnClickListener(View.OnClickListener {
+            Toast.makeText(context, "" + position, Toast.LENGTH_SHORT).show()
+        })
     }
 
     override fun getItemCount(): Int {
@@ -26,10 +30,10 @@ class WallpapersAdapter(var context: Context, var list: List<String>) :
     }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        //var appName: TextView
+        var tvSet: TextView
 
         init {
-            //appName = itemView.findViewById(R.id.appName)
+            tvSet = itemView.findViewById(R.id.tvSet)
         }
     }
 }

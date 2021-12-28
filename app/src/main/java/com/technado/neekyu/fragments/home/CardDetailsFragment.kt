@@ -29,6 +29,9 @@ class CardDetailsFragment : BaseFragment() {
         binding?.edtCardNumber?.addTextChangedListener(CustomTextWatcher(
             onChanged = { text, start, before, count ->
                 if (count > 0) {
+
+                    binding?.tvCardNo?.text = text
+
                     val p: Pattern = Pattern.compile("(\\d{4})$")
                     val m: Matcher = p.matcher(text)
                     if (m.find()) {
@@ -38,6 +41,8 @@ class CardDetailsFragment : BaseFragment() {
                 }
             }
         ))
+
+
         return binding?.root
     }
 
