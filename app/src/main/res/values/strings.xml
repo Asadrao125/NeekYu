@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">NeekYu</string>
+
+    <string name="signup"><u>Signup</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <array name="dummy">
+        <item>Dummy Text</item>
+        <item>Dummy Text</item>
+        <item>Dummy Text</item>
+        <item>Dummy Text</item>
+    </array>
+
+    <array name="dummy2">
+        <item>Dummy Text</item>
+        <item>Dummy Text</item>
+        <item>Dummy Text</item>
+        <item>Dummy Text</item>
+        <item>Dummy Text</item>
+        <item>Dummy Text</item>
+        <item>Dummy Text</item>
+        <item>Dummy Text</item>
+        <item>Dummy Text</item>
+    </array>
+
+</resources>
