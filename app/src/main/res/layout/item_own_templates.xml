@@ -10,28 +10,13 @@
 
     <RelativeLayout
         android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_90sdp">
+        android:layout_height="@dimen/_150sdp">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:src="@mipmap/ic_launcher" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="@dimen/_5sdp"
-            android:layout_marginRight="@dimen/_5sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:background="@drawable/blue_curve"
-            android:gravity="center"
-            android:text="Set"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12ssp"
-            android:textStyle="bold" />
 
     </RelativeLayout>
 

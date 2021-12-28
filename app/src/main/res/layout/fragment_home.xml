@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data class="HomeFragmentBinding" />
@@ -7,14 +8,111 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:background="@color/black"
+        android:orientation="vertical"
         tools:context=".fragments.home.HomeFragment">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Home"
-            android:textSize="@dimen/_20ssp" />
+            android:layout_margin="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Wallpapers"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgWallpaper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_forward"
+                app:tint="@color/dark_gray" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewWallpapers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_wallpappers" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Password Screens"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgPasswordScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_forward"
+                app:tint="@color/dark_gray" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPaswordScreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_pasword_screen" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Own Templates"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgOwnTemplates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_forward"
+                app:tint="@color/dark_gray" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewOwnTemplates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_own_templates" />
 
     </LinearLayout>
 

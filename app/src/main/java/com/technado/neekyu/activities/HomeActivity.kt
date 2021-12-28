@@ -45,12 +45,14 @@ class HomeActivity : BaseActivity(), View.OnClickListener {
             val fragmentManager = supportFragmentManager
             val fragments: List<Fragment> = fragmentManager.fragments
             val last: Fragment = fragments.get(fragments.size - 1)
-
             supportFragmentManager.popBackStack()
-
         } else {
-            val exitDialog = ExitDialog()
-            exitDialog.show(supportFragmentManager, "exitDialog")
+            if (binding?.drawerlayout!!.isDrawerOpen(GravityCompat.START)) {
+                closeDrawers()
+            } else {
+                val exitDialog = ExitDialog()
+                exitDialog.show(supportFragmentManager, "exitDialog")
+            }
         }
     }
 
