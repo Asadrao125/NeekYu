@@ -44,13 +44,12 @@ class AppsLockFragment : BaseFragment() {
 
         dialogCustom.showProgressDialog()
         Handler(Looper.getMainLooper()).postDelayed({
-            getInstalledApps()
-            dialogCustom.dismissProgressDialog()
             binding?.recyclerView?.adapter =
                 AppsLockAdapter(
                     getActivityContext!!,
                     getInstalledApps()
                 )
+            dialogCustom.dismissProgressDialog()
         }, 500)
         return binding?.root
     }
