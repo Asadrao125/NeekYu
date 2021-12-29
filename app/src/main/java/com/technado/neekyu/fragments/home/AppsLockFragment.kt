@@ -19,6 +19,7 @@ import com.technado.neekyu.R
 import com.technado.neekyu.adapters.AppsLockAdapter
 import com.technado.neekyu.base.BaseFragment
 import com.technado.neekyu.databinding.AppsLockFragmentBinding
+import com.technado.neekyu.helper.Dialog_CustomProgress
 import com.technado.neekyu.helper.Titlebar
 import com.technado.neekyu.models.AppModel
 import java.util.*
@@ -26,8 +27,8 @@ import kotlin.collections.ArrayList
 
 class AppsLockFragment : BaseFragment() {
     var binding: AppsLockFragmentBinding? = null
-    var progRessDialog: ProgressDialog? = null
     private lateinit var installedAppsList: ArrayList<AppModel>
+    lateinit var dialogCustom: Dialog_CustomProgress
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,18 +36,16 @@ class AppsLockFragment : BaseFragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_apps_lock, container, false)
 
+        dialogCustom = Dialog_CustomProgress(getActivityContext!!)
         installedAppsList = ArrayList()
         getActivityContext?.lockMenu()
-        progRessDialog = ProgressDialog(getActivityContext)
         binding?.recyclerView?.layoutManager = LinearLayoutManager(getActivityContext)
         binding?.recyclerView?.setHasFixedSize(true)
 
-        progRessDialog!!.setMessage("Loading...")
-        progRessDialog!!.show()
-
+        dialogCustom.showProgressDialog()
         Handler(Looper.getMainLooper()).postDelayed({
             getInstalledApps()
-            progRessDialog!!.dismiss()
+            dialogCustom.dismissProgressDialog()
             binding?.recyclerView?.adapter =
                 AppsLockAdapter(
                     getActivityContext!!,
