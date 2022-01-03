@@ -29,6 +29,15 @@ class HomeFragment : BaseFragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
 
+        binding?.btnDrawPattern?.setOnClickListener(View.OnClickListener {
+            getActivityContext?.replaceFragment(
+                DrawPatternFragment(),
+                DrawPatternFragment::class.java.simpleName,
+                true,
+                true
+            )
+        })
+
         getActivityContext?.unlockMenu()
 
         recyclerViewWallpapers = binding?.recyclerViewWallpapers!!

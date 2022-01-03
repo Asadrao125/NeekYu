@@ -35,6 +35,8 @@ class DrawPatternFragment : BaseFragment() {
             resources.getStringArray(R.array.pattern).toList()
         )
 
+        getActivityContext!!.lockMenu()
+
         return binding?.root
     }
 

@@ -23,12 +23,7 @@ class HomeActivity : BaseActivity(), View.OnClickListener {
 
         setMainFrameLayoutID()
         setListener()
-        replaceFragment(
-            DrawPatternFragment(),
-            DrawPatternFragment::class.java.simpleName,
-            true,
-            false
-        )
+        replaceFragment(HomeFragment(), HomeFragment::class.java.simpleName, true, false)
     }
 
     fun setListener() {
