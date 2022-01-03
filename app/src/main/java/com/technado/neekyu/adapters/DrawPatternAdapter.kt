@@ -22,7 +22,9 @@ class DrawPatternAdapter(var context: Context, var list: List<String>) :
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        holder.itemView.setOnClickListener(View.OnClickListener {
 
+        })
     }
 
     override fun getItemCount(): Int {
