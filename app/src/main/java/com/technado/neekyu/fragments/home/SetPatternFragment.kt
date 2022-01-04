@@ -26,6 +26,6 @@ class SetPatternFragment : BaseFragment() {
     }
 
     override fun setTitlebar(titlebar: Titlebar) {
-        titlebar.setBackTitle(getActivityContext!!, "Draw pattern")
+        titlebar.setBackTitle(getActivityContext!!, "Draw a pattern")
     }
 }
