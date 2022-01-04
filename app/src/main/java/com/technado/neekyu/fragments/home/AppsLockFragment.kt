@@ -53,10 +53,6 @@ class AppsLockFragment : BaseFragment() {
             dialogCustom.dismissProgressDialog()
         }, 500)
 
-        val appModel = AppModel("name", resources.getDrawable(R.drawable.facebook), "pkg 1")
-        Log.d("appModel", "onCreateView: " + appModel.component3())
-        Log.d("appModel", "onCreateView: " + appModel.copy("name2"))
-
         return binding?.root
     }
 
