@@ -1,7 +1,6 @@
 package com.technado.neekyu.fragments.home
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.technado.neekyu.R
 import com.technado.neekyu.adapters.OwnTemplatesAdapter
 import com.technado.neekyu.adapters.PasswordScreenAdapter
-import com.technado.neekyu.adapters.SubscriptionsAdapter
 import com.technado.neekyu.adapters.WallpapersAdapter
 import com.technado.neekyu.base.BaseFragment
 import com.technado.neekyu.databinding.HomeFragmentBinding
