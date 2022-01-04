@@ -52,7 +52,6 @@ class AppsLockFragment : BaseFragment() {
                 )
             dialogCustom.dismissProgressDialog()
         }, 500)
-
         return binding?.root
     }
 
