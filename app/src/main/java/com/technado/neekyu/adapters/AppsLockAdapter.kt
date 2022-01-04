@@ -22,11 +22,12 @@ class AppsLockAdapter(var context: Context, var list: List<AppModel>) :
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        val appModel = list.get(position)
         holder.itemView.setOnClickListener(View.OnClickListener {
-            Toast.makeText(context, "" + list.get(position).name, Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "" + appModel.name, Toast.LENGTH_SHORT).show()
         })
-        holder.appName.text = list.get(position).name
-        holder.image.setImageDrawable(list.get(position).icon)
+        holder.appName.text = appModel.name
+        holder.image.setImageDrawable(appModel.icon)
     }
 
     override fun getItemCount(): Int {
