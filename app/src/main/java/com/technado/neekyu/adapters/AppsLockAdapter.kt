@@ -23,10 +23,10 @@ class AppsLockAdapter(var context: Context, var list: List<AppModel>) :
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.itemView.setOnClickListener(View.OnClickListener {
-            Toast.makeText(context, "" + list.get(position).getName(), Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "" + list.get(position).name, Toast.LENGTH_SHORT).show()
         })
-        holder.appName.text = list.get(position).getName()
-        holder.image.setImageDrawable(list.get(position).getIcon())
+        holder.appName.text = list.get(position).name
+        holder.image.setImageDrawable(list.get(position).icon)
     }
 
     override fun getItemCount(): Int {

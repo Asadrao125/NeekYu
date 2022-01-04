@@ -2,16 +2,4 @@ package com.technado.neekyu.models
 
 import android.graphics.drawable.Drawable
 
-class AppModel(private var name:String, private var icon: Drawable, private var packages:String) {
-    fun getName(): String {
-        return name
-    }
-
-    fun getIcon(): Drawable {
-        return icon
-    }
-
-    fun getPackages(): String {
-        return packages
-    }
-}
+class AppModel(var name: String, var icon: Drawable, var packages: String)
