@@ -13,9 +13,6 @@ import com.technado.neekyu.helper.Titlebar
 
 class SetPatternFragment : BaseFragment() {
     var binding: SetPatternBinding? = null
-    override fun setTitlebar(titlebar: Titlebar) {
-        titlebar.setBackTitle(getActivityContext!!, "Set Pattern")
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,5 +23,9 @@ class SetPatternFragment : BaseFragment() {
         getActivityContext?.lockMenu()
 
         return binding?.root
+    }
+
+    override fun setTitlebar(titlebar: Titlebar) {
+        titlebar.setBackTitle(getActivityContext!!, "Draw pattern")
     }
 }

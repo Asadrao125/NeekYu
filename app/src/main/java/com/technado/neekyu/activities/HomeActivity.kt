@@ -29,7 +29,6 @@ class HomeActivity : BaseActivity(), View.OnClickListener {
     fun setListener() {
         binding?.llHome?.setOnClickListener(this)
         binding?.llProfile?.setOnClickListener(this)
-
         binding?.llSubscriptions?.setOnClickListener(this)
         binding?.llSetPattern?.setOnClickListener(this)
         binding?.llSettings?.setOnClickListener(this)
